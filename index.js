@@ -68,12 +68,6 @@ function validateTitle() {
   postTitleInputNode.addEventListener("input", () => {
     const titleLength = postTitleInputNode.value.length;
     resultTitleNode.textContent = titleLength + "/" + titleLimit;
-    
-    const postTitleValue = postTitleInputNode.value;
-    const postTextValue = postTextInputNode.value;
-    if (!postTitleValue || !postTextValue || postTitleInputNode.value.length > titleLimit || postTextInputNode.value.length > limit) {
-      return;
-    }
 
     if (titleLength > titleLimit) {
       postTitleInputNode.style.borderColor = '#E52B50';
