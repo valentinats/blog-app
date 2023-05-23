@@ -1,0 +1,617 @@
+html,
+body {
+  width: 100%;
+  font-family: "Poppins", "Montserrat Alternates", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0 auto;
+  background-image: url("resources/background-img.jpg");
+  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat993.cur), auto !important;
+}
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat993.cur), auto !important;
+}
+
+.container {
+  width: 845px;
+  height: 405px;
+  margin: 170px auto 0;
+  border-radius: 20px;
+  background: #f7f7f7;
+  box-shadow: 2px 2px 15px rgb(0 0 0 / 10%);
+}
+
+.page__wrapper {
+  display: flex;
+}
+
+.sidebar {
+  position: relative;
+  float: left;
+  width: 360px;
+  height: 405px;
+  padding: 15px;
+  border-radius: 20px 0px 0px 20px;
+  background: #f7f7f7;
+}
+
+.sidebar__image {
+  width: 250px;
+  z-index: 100;
+  position: relative;
+  bottom: -205px;
+  transform: rotate(340deg);
+}
+
+.side__deco {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  height: 405px;
+  width: 260px;
+  border-radius: 20px 0px 0px 20px;
+  background: linear-gradient(
+    -90deg,
+    rgba(249, 191, 200, 1) 0%,
+    rgba(218, 228, 243, 1) 100%
+  );
+  z-index: 2;
+}
+
+.side__deco_svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 260px;
+  height: 405px;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.p__tape {
+  position: absolute;
+  top: 15px;
+  left: 190px;
+  display: block;
+  width: 100px;
+  height: 30px;
+  background: rgba(213, 168, 192, 0.8);
+  z-index: 4;
+}
+
+.polaroid__cont {
+  position: absolute;
+  top: 36px;
+  left: 110px;
+  display: inline-block;
+  width: 250px;
+  height: 330px;
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 5%);
+  background: #ffffff;
+  z-index: 3;
+}
+
+.polaroid {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+}
+
+.polaroid img {
+  width: 210px;
+  height: 290px;
+}
+
+.color-palette {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 358px;
+  left: 248px;
+  width: 124px;
+  z-index: 4;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.palette_one {
+  background: #cedbee;
+}
+
+.palette_two {
+  background: #f6aeb9;
+}
+
+.palette_three {
+  background: #d5a8c0;
+}
+
+.palette_one,
+.palette_two,
+.palette_three {
+  height: 35px;
+  width: 35px;
+  border-radius: 8px;
+}
+
+.posts__container {
+  position: relative;
+  top: -30px;
+  right: -25px;
+  float: right;
+  width: calc(350px + 30px + 15px + 40px);
+  border-radius: 15px;
+  height: 465px;
+  padding: 15px;
+  box-sizing: border-box;
+  background: #c3d1e5;
+  box-shadow: 2px 2px 15px rgb(0 0 0 / 10%);
+}
+
+.title__cont {
+  background: #c3d1e5;
+}
+
+.title__cont_border-hor {
+  position: absolute;
+  top: 21px;
+  left: 26px;
+  width: calc(350px - 30px);
+  height: 1px;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.blog__title {
+  height: 14px;
+  padding: 0px 10px 10px 10px;
+  text-align: right;
+  background: #c3d1e5;
+}
+
+.blog__title h1 {
+  position: relative;
+  display: inline-block;
+  background: #c3d1e5;
+  font-weight: bold;
+  text-transform: lowercase;
+  font-size: 9.5pt;
+  line-height: 9.5pt;
+  color: #ffffff;
+  margin: 0px -7px 0px 0px;
+  padding: 0px 0px 0px 40px;
+  z-index: 2;
+}
+
+.blog__links {
+  position: absolute;
+  top: 40px;
+  right: 14px;
+  height: calc(100% - 14px - 66px);
+  width: 14px;
+  background: #c3d1e5;
+}
+
+.blog__title_border-vert {
+  position: absolute;
+  top: 20px;
+  left: 7px;
+  width: 2px;
+  height: calc(100% - 50px);
+  background: #ffffff;
+}
+
+.links {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: -5px;
+  right: -7px;
+  padding: 30px 0px 0px 0px;
+  background: #c3d1e5;
+}
+
+.links a {
+  display: block;
+  margin-bottom: 16px;
+  border: 0px;
+  color: #ffffff;
+}
+
+.links a:hover {
+  transform: scale(1.2);
+}
+
+.links span {
+  position: relative;
+  left: -3px;
+  font-size: 16px;
+}
+
+.home__icon::before {
+  content: url("resources/home-icon.svg");
+}
+
+.github__icon::before {
+  content: url("resources/github-icon.svg");
+}
+
+.tg__icon::before {
+  content: url("resources/tg-icon.svg");
+}
+
+.email__icon::before {
+  content: url("resources/email-icon.svg");
+}
+
+.form__section {
+  position: absolute;
+  top: 42px;
+  width: calc(350px + 30px);
+  height: 405px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  border: 0px;
+  width: 0px;
+  height: 0px;
+}
+
+.form__cont,
+.post__item {
+  padding: 15px;
+  margin-bottom: 25px;
+  background: #ffffff;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #d5a8c0;
+  word-wrap: break-word;
+}
+
+.form__avatar {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  height: 55px;
+  width: 55px;
+  z-index: 1;
+}
+
+.form__avatar img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.form__user {
+  position: relative;
+  top: -6px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.form__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.form__title,
+.form__textarea {
+  font-size: 12px;
+  border: 2px solid #d5a8c0;
+  border-radius: 10px;
+  padding: 7px;
+  outline: none;
+  font-family: "Montserrat Alternates";
+  resize: none;
+  min-height: 20px;
+  height: 25px;
+}
+
+.text__counter {
+  width: 100%;
+  text-align: right;
+  margin-top: -30px;
+  padding-right: 10px;
+}
+
+.title__counter {
+  width: 100%;
+  text-align: right;
+  margin-top: -28px;
+  padding-right: 10px;
+}
+
+.form__buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__button {
+  font-family: "Montserrat Alternates";
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  border: none;
+  background: rgba(246, 174, 185, 0.8);
+  line-height: 25px;
+  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat993.cur), auto !important;
+
+  &:disabled {
+    background-color: #C0C0C0;
+  }
+}
+
+.form__reset {
+  font-family: "Montserrat Alternates";
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  border: none;
+  background: rgba(246, 174, 185, 0.8);
+  line-height: 25px;
+  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat993.cur), auto !important;
+}
+
+.posts p {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.post__title {
+  margin-bottom: 20px;
+}
+
+.post__text {
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.post__date {
+  width: 100%;
+  display: block;
+  padding: 10px 15px;
+  border-top: 1px solid #eaeaea;
+}
+
+.post__date::before {
+  content: url(resources/pin.svg);
+  position: relative;
+  top: 2px;
+  margin: 0px 5px 0px -14px;
+}
+
+/*--------------------------адаптив для планшета-----------------------------*/
+
+@media (max-width: 865px) {
+  html,
+  body {
+    padding: 22px;
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    height: 404px;
+    margin: 0 auto 0;
+    border-radius: 20px;
+    background: #f7f7f7;
+    box-shadow: 2px 2px 15px rgb(0 0 0 / 10%);
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar__image {
+    left: -70px;
+  }
+
+  .p__tape {
+    left: 90px;
+  }
+
+  .polaroid__cont {
+    left: 20px;
+  }
+
+  .color-palette {
+    left: 147px;
+  }
+
+  .blog__title {
+    text-align: center;
+  }
+
+  .blog__title h1 {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .blog__title_border-vert {
+    display: none;
+    width: 0px;
+  }
+
+  .blog__links {
+    width: 95%;
+  }
+
+  .links {
+    padding: 30px 35px;
+    top: -23px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .links a:hover {
+    transform: none;
+  }
+
+  .posts__container {
+    position: relative;
+    right: 27px;
+    float: right;
+    width: 100%;
+    border-radius: 15px;
+    height: 465px;
+    padding: 7px;
+    box-sizing: border-box;
+    background: #c3d1e5;
+    box-shadow: 2px 2px 15px rgb(0 0 0 / 10%);
+  }
+
+  .title__cont_border-hor {
+    display: block;
+    width: 0px;
+  }
+
+  .title__cont {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form__section {
+    width: 100%;
+    height: 372px;
+    position: relative;
+  }
+
+  .form__title,
+  .form__textarea {
+    word-wrap: break-word;
+  }
+
+  .form__cont,
+  .post__item {
+    padding: 8px;
+    margin-bottom: 22px;
+    width: 100%;
+  }
+
+  .posts p {
+    text-align: center;
+  }
+}
+
+/*--------------------------адаптив для телефона-----------------------------*/
+@media (max-width: 690px) {
+  .container {
+    width: 100%;
+    height: 862px;
+    margin: 0 auto 0;
+    border-radius: 20px;
+    background: #f7f7f7;
+    box-shadow: 2px 2px 15px rgb(0 0 0 / 10%);
+  }
+
+  .page__wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar__image {
+    left: -60px;
+    bottom: -163px;
+  }
+
+  .side__deco {
+    width: 100%;
+  }
+
+  .side__deco_svg {
+    width: 100%;
+  }
+
+  .p__tape {
+    left: 92px;
+  }
+
+  .polaroid img {
+    width: 180px;
+    height: 272px;
+  }
+
+  .polaroid__cont {
+    left: 32px;
+    width: 220px;
+    height: 310px;
+  }
+
+  .color-palette {
+    left: 146px;
+    width: 100px;
+  }
+
+  .palette_one,
+  .palette_two,
+  .palette_three {
+    width: 25px;
+    height: 25px;
+  }
+
+  .title__cont_border-hor {
+    display: none;
+  }
+
+  .posts__container {
+    position: relative;
+    top: 15px;
+    right: 0px;
+    float: right;
+    width: 100%;
+    border-radius: 15px;
+    height: 465px;
+    padding: 7px;
+    box-sizing: border-box;
+    background: #c3d1e5;
+    box-shadow: 2px 2px 15px rgb(0 0 0 / 10%);
+  }
+
+  .title__cont {
+    margin-top: 10px;
+  }
+
+  .title__cont_border-hor {
+    display: none;
+  }
+
+  .form__user {
+    width: 145px;
+  }
+
+  .form__section {
+    width: 100%;
+    height: 368px;
+    position: relative;
+  }
+
+  .form__cont,
+  .post__item {
+    padding: 8px;
+    margin-bottom: 22px;
+    width: 100%;
+  }
+
+  .posts p {
+    text-align: center;
+  }
+}
