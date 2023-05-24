@@ -347,10 +347,9 @@ a {
   background: rgba(246, 174, 185, 0.8);
   line-height: 25px;
   cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat993.cur), auto !important;
-
-  &:disabled {
-    background-color: #C0C0C0;
-  }
+}  
+.form__button:disabled {
+  background-color: #C0C0C0;
 }
 
 .form__reset {
