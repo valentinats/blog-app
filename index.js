@@ -60,50 +60,61 @@ const clearCounter = () => {
   resultNode.textContent = 0 + "/" + limit;
 }
 
+//------------------------------ 
+
 //подсчет вводимых символов в поле заголовка.
-function validateTitle() {
-  const titleLimit = 100;
+const titleLimit = 100;
 
-  resultTitleNode.textContent = 0 + "/" + titleLimit;
-  postTitleInputNode.addEventListener("input", () => {
-    const titleLength = postTitleInputNode.value.length;
-    resultTitleNode.textContent = titleLength + "/" + titleLimit;
-
-    if (titleLength > titleLimit) {
-      postTitleInputNode.style.borderColor = '#E52B50';
-      resultTitleNode.style.color = '#E52B50';
-      newPostBtnNode.disabled = true;
-    } else {
-      postTitleInputNode.style.borderColor = '#d5a8c0';
-      resultTitleNode.style.color = '#d5a8c0';
-      e.preventDefault();
-      newPostBtnNode.disabled = false;
-    }
-  });
-}
-validateTitle();
+resultTitleNode.textContent = 0 + '/' + titleLimit;
+postTitleInputNode.addEventListener('input', function (event) {
+  validation();
+});
 
 //подсчет вводимых символов в поле текста.
-function validateTextarea() {
-  const limit = 200;
-  
-  resultNode.textContent = 0 + "/" + limit;
-  postTextInputNode.addEventListener("input", () => {
-    const textLength = postTextInputNode.value.length;
-    resultNode.textContent = textLength + "/" + limit;
+const limit = 200;
 
-    if (textLength > limit) {
-      postTextInputNode.style.borderColor = '#E52B50';
-      resultNode.style.color = '#E52B50';
-      newPostBtnNode.disabled = true;
-    } else {
-      postTextInputNode.style.borderColor = '#d5a8c0';
-      resultNode.style.color = '#d5a8c0';
-      newPostBtnNode.disabled = false;
-    }
-  });
+resultNode.textContent = 0 + '/' + limit;
+postTextInputNode.addEventListener('input', function (event) {
+  validation();
+});
+
+//Валидация ввода символов.
+
+function validation() {
+  const titleLimit = 100;
+  const limit = 200;
+
+  const titleLength = postTitleInputNode.value.length;
+  const textLength = postTextInputNode.value.length;
+
+  resultTitleNode.textContent = 0 + '/' + titleLimit;
+  resultTitleNode.textContent = titleLength + '/' + titleLimit;
+
+  resultNode.textContent = 0 + '/' + limit;
+  resultNode.textContent = textLength + '/' + limit;
+
+  if (titleLength > titleLimit) {
+    postTitleInputNode.style.borderColor = '#E52B50';
+    resultTitleNode.style.color = '#E52B50';
+    newPostBtnNode.disabled = true;
+    return;
+  } else {
+    postTitleInputNode.style.borderColor = '#d5a8c0';
+    resultTitleNode.style.color = '#d5a8c0';
+    newPostBtnNode.disabled = false;
+  }
+
+  if (textLength > limit) {
+    postTextInputNode.style.borderColor = '#E52B50';
+    resultNode.style.color = '#E52B50';
+    newPostBtnNode.disabled = true;
+    return;
+  } else {
+    postTextInputNode.style.borderColor = '#d5a8c0';
+    resultNode.style.color = '#d5a8c0';
+    newPostBtnNode.disabled = false;
+  }
 }
-validateTextarea();
 
 //------------------------------ 
 
