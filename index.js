@@ -72,6 +72,7 @@ function validateTitle() {
     if (titleLength > titleLimit) {
       postTitleInputNode.style.borderColor = '#E52B50';
       resultTitleNode.style.color = '#E52B50';
+      e.preventDefault();
       newPostBtnNode.disabled = true;
     } else {
       postTitleInputNode.style.borderColor = '#d5a8c0';
