@@ -31,7 +31,10 @@ newPostBtnNode.addEventListener("click", function () {
 function getPostFromUser() {
   const title = postTitleInputNode.value;
   const text = postTextInputNode.value;
-  const now = new Date().toLocaleString().slice(0, -3);
+  
+  //ООП. Присваиваем экземпляр объекта Date.
+  const currentDate = new Date();
+  const now = `${currentDate.getDate().toString().padStart(2, "0")}.${(currentDate.getMonth() + 1).toString().padStart(2, "0")}.${currentDate.getFullYear()}` + ',' + ' ' + `${currentDate.getHours().toString().padStart(2, "0")}` + ':' + `${currentDate.getMinutes().toString().padStart(2, "0")}`;
 
   if ((title, text === "")) {
     return;
